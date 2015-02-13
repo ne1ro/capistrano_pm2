@@ -1,6 +1,6 @@
-# CapistranoPm2
+# Capistrano_pm2
 
-TODO: Write a gem description
+PM2 support for Capistrano 3.x.
 
 ## Installation
 
@@ -20,7 +20,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Require in Capfile to use the default task:
+
+```ruby
+require 'capistrano/pm2'
+```  
+**pm2:restart** task will run after **deploy:updated** as part of Capistrano's default deploy, or can be run in isolation with `bundle exec cap production pm2:restart`
+
+Configurable options:  
+```ruby
+set :pm2_config, 'config/pm2.json' # PM2 config path by default
+```  
+
+## Tasks list
+
+With config:  
+`cap pm2:stop                       # Stop server  `  
+`cap pm2:start                      # Start server  `  
+`cap pm2:restart                    # Restart server  `  
+  
+Without config:  
+`cap pm2:delete[id]                 # Delete process by id or name`  
+`cap pm2:describe[id]               # Describe process by id or name`  
+`cap pm2:kill                       # Kill PM2`  
+`cap pm2:list                       # List of processes`  
+`cap pm2:save                       # Save the processes list`  
+`cap pm2:startup                    # Startup script`  
+
 
 ## Contributing
 
