@@ -56,14 +56,14 @@ namespace :pm2 do
   end
 
   desc 'Describe process by id or name'
-  task :describe, :id do |task, args|
+  task :describe, :id do |_task, args|
     on roles(:web) do
       info(capture :pm2, 'describe', args[:id])
     end
   end
 
   desc 'Delete process by id or name'
-  task :delete, :id do |task, args|
+  task :delete, :id do |_task, args|
     on roles(:web) do
       execute :pm2, 'delete', args[:id]
     end
@@ -74,6 +74,6 @@ end
 
 namespace :load do
   task :defaults do
-    set :pm2_config, "config/pm2.json"
+    set :pm2_config, 'config/pm2.json'
   end
 end
