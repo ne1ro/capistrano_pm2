@@ -25,7 +25,7 @@ Require in Capfile to use the default task:
 ```ruby
 require 'capistrano/pm2'
 ```  
-**pm2:restart** task will run after **deploy:updated** as part of Capistrano's default deploy, or can be run in isolation with `bundle exec cap production pm2:restart`
+**pm2:restart** task will run after **deploy:published** as part of Capistrano's default deploy, or can be run in isolation with `bundle exec cap production pm2:restart`
 
 Configurable options:  
 ```ruby
