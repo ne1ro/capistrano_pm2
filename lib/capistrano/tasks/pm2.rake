@@ -69,7 +69,7 @@ namespace :pm2 do
     end
   end
 
-  after 'deploy:updated', :restart
+  after 'deploy:published', :restart
 end
 
 namespace :load do
