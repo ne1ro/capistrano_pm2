@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['neiro']
   spec.email         = ['neiro.mail@gmail.com']
   spec.summary       = 'Capistrano integration for PM2'
-  spec.description   = 'Capistrano integration for node.js \
-    process manager PM2 '
+  spec.description   = 'Capistrano integration for node.js
+     process manager PM2'
   spec.homepage      = 'https://github.com/ne1ro/capistrano_pm2'
   spec.license       = 'MIT'
 
